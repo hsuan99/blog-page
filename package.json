@@ -1,16 +1,9 @@
 {
     "title": "Clean Blog",
     "name": "startbootstrap-clean-blog",
-    "version": "6.0.9",
+    "version": "5.0.10",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start": "node_modules/.bin/gulp watch"
     },
     "description": "Clean Blog is a Medium inspired blog theme for Bootstrap.",
     "keywords": [
@@ -36,18 +29,21 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-clean-blog.git"
     },
     "dependencies": {
-        "bootstrap": "5.2.3"
+        "@fortawesome/fontawesome-free": "5.15.1",
+        "bootstrap": "4.5.3",
+        "jquery": "3.5.1"
     },
     "devDependencies": {
-        "autoprefixer": "10.4.14",
-        "browser-sync": "2.29.1",
-        "chokidar": "3.5.3",
-        "concurrently": "6.3.0",
-        "postcss": "8.4.21",
-        "prettier": "2.8.6",
-        "pug": "3.0.2",
-        "sass": "1.60.0",
-        "shelljs": "0.8.5",
-        "upath": "2.0.1"
+        "browser-sync": "2.26.13",
+        "del": "6.0.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.1",
+        "gulp-clean-css": "4.3.0",
+        "gulp-header": "2.0.9",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "2.0.0",
+        "gulp-sass": "4.1.0",
+        "gulp-uglify": "3.0.2",
+        "merge-stream": "2.0.0"
     }
 }
